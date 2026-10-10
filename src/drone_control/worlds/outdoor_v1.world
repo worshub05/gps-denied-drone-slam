@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+    <include><uri>model://sun</uri></include>
+    <include><uri>model://ground_plane</uri></include>
+    <include><uri>model://asphalt_plane</uri></include>
+
+    <!-- Rock 1 -->
+    <model name="rock_1">
+      <static>true</static>
+      <pose>6 2 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>1.2 1.2 1.0</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>1.2 1.2 1.0</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <!-- Rock 2 -->
+    <model name="rock_2">
+      <static>true</static>
+      <pose>-4 -5 0.75 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>1.5 1.5 1.5</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>1.5 1.5 1.5</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <!-- Tree trunk 1 -->
+    <model name="tree_1">
+      <static>true</static>
+      <pose>3 -6 3 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><cylinder><radius>0.3</radius><length>6</length></cylinder></geometry></collision>
+        <visual name="v"><geometry><cylinder><radius>0.3</radius><length>6</length></cylinder></geometry></visual>
+      </link>
+    </model>
+
+    <!-- Tree trunk 2 -->
+    <model name="tree_2">
+      <static>true</static>
+      <pose>-8 4 3 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><cylinder><radius>0.3</radius><length>6</length></cylinder></geometry></collision>
+        <visual name="v"><geometry><cylinder><radius>0.3</radius><length>6</length></cylinder></geometry></visual>
+      </link>
+    </model>
+
+    <!-- Low wall -->
+    <model name="wall_1">
+      <static>true</static>
+      <pose>0 8 1 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>10 0.4 2</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>10 0.4 2</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <physics name='default_physics' default='0' type='ode'>
+      <gravity>0 0 -9.8066</gravity>
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+  </world>
+</sdf>
