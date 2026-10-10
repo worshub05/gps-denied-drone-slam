@@ -5,3 +5,4 @@ log/
 *.db3
 rosbags/
 __pycache__/
+src/px4_msgs/
