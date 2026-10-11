@@ -5,7 +5,7 @@ from launch.actions import ExecuteProcess, TimerAction
 
 def generate_launch_description():
     home = os.path.expanduser('~')
-    world = os.path.join(home, 'gpsdenied_ws/src/drone_control/worlds/outdoor_v1.world')
+    world = os.path.join(home, 'gpsdenied_ws/src/drone_control/worlds/outdoor_v2.world')
     px4_dir = os.path.join(home, 'PX4-Autopilot')
 
     # PX4 must not load ROS plugins, so remove the ROS variables for that process only
@@ -31,4 +31,4 @@ def generate_launch_description():
             output='screen',
         )],
     )
-    return LaunchDescription([bridge, simulator, hover])
+    return LaunchDescription([bridge, simulator])

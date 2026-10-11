@@ -1,0 +1,1752 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="outdoor_v2">
+    <include><uri>model://sun</uri></include>
+    <physics name="default_physics" default="0" type="ode">
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.45 0.45 0.45 1</ambient>
+      <background>0.62 0.78 0.92 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <model name="terrain">
+      <static>true</static>
+      <link name="link">
+        <collision name="col">
+          <geometry><heightmap><uri>model://terrain_v2/heightmap.png</uri><size>200 200 15</size><pos>0 0 0</pos></heightmap></geometry>
+        </collision>
+        <visual name="vis">
+          <geometry><heightmap>
+            <uri>model://terrain_v2/heightmap.png</uri><size>200 200 15</size><pos>0 0 0</pos>
+            <texture><diffuse>file://media/materials/textures/dirt_diffusespecular.png</diffuse><normal>file://media/materials/textures/flat_normal.png</normal><size>20</size></texture>
+            <texture><diffuse>file://media/materials/textures/grass_diffusespecular.png</diffuse><normal>file://media/materials/textures/flat_normal.png</normal><size>20</size></texture>
+            <blend><min_height>2</min_height><fade_dist>3</fade_dist></blend>
+          </heightmap></geometry>
+        </visual>
+      </link>
+    </model>
+    <model name="tree_0">
+      <static>true</static>
+      <pose>-63.44 11.86 11.67 0 0 4.497</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.52</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.52</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_1">
+      <static>true</static>
+      <pose>-58.97 18.04 12.28 0 0 0.898</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.93</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.93</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_2">
+      <static>true</static>
+      <pose>-68.59 12.17 10.27 0 0 6.076</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.11</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.11</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_3">
+      <static>true</static>
+      <pose>-73.22 18.77 8.25 0 0 5.982</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.58</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.58</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_4">
+      <static>true</static>
+      <pose>-52.91 5.26 11.94 0 0 3.060</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.72</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.72</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_5">
+      <static>true</static>
+      <pose>-77.63 25.70 5.73 0 0 5.228</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.19</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.19</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_6">
+      <static>true</static>
+      <pose>-51.52 28.76 10.35 0 0 2.710</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.53</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.53</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_7">
+      <static>true</static>
+      <pose>-81.61 0.89 6.46 0 0 2.130</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.81</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.81</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_8">
+      <static>true</static>
+      <pose>-61.29 16.92 11.99 0 0 2.000</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.56</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.56</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_9">
+      <static>true</static>
+      <pose>-74.59 32.35 5.31 0 0 0.122</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.98</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.98</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_10">
+      <static>true</static>
+      <pose>-54.59 24.97 11.36 0 0 2.766</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.84</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.84</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_11">
+      <static>true</static>
+      <pose>-62.30 27.46 9.66 0 0 2.082</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.41</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.41</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_12">
+      <static>true</static>
+      <pose>-50.16 29.12 10.23 0 0 3.217</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.90</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.90</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_13">
+      <static>true</static>
+      <pose>-59.84 28.48 9.79 0 0 6.186</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.45</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.45</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_14">
+      <static>true</static>
+      <pose>-78.63 35.09 3.80 0 0 6.102</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.03</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.03</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_15">
+      <static>true</static>
+      <pose>-55.92 28.32 10.30 0 0 1.668</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.48</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.48</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_16">
+      <static>true</static>
+      <pose>-82.28 17.85 5.20 0 0 4.892</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.43</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.43</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_17">
+      <static>true</static>
+      <pose>-56.93 7.25 12.20 0 0 0.814</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.62</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.62</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_18">
+      <static>true</static>
+      <pose>-66.17 32.73 7.25 0 0 5.724</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.74</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.74</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_19">
+      <static>true</static>
+      <pose>-76.31 38.04 3.72 0 0 1.624</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.06</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.06</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_20">
+      <static>true</static>
+      <pose>-59.54 22.20 11.51 0 0 5.772</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.52</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.52</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_21">
+      <static>true</static>
+      <pose>-61.59 29.40 9.21 0 0 4.399</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.86</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.86</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_22">
+      <static>true</static>
+      <pose>-43.29 -5.84 8.67 0 0 0.361</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.47</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.47</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_23">
+      <static>true</static>
+      <pose>-27.96 -1.86 7.77 0 0 2.671</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.95</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.95</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_24">
+      <static>true</static>
+      <pose>-45.26 6.41 11.49 0 0 5.893</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.46</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.46</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_25">
+      <static>true</static>
+      <pose>-49.75 -3.32 9.65 0 0 5.034</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.91</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.91</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_26">
+      <static>true</static>
+      <pose>-38.67 -4.79 8.54 0 0 5.377</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.47</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.47</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_27">
+      <static>true</static>
+      <pose>-44.42 3.58 10.86 0 0 5.418</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.45</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.45</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_28">
+      <static>true</static>
+      <pose>-27.17 5.63 7.85 0 0 2.130</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.76</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.76</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_29">
+      <static>true</static>
+      <pose>-34.23 -0.82 8.59 0 0 5.819</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.84</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.84</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_30">
+      <static>true</static>
+      <pose>-35.96 3.07 9.32 0 0 0.812</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.61</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.61</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_31">
+      <static>true</static>
+      <pose>-38.92 0.39 9.44 0 0 1.497</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.82</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.82</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_32">
+      <static>true</static>
+      <pose>-32.18 -2.10 8.21 0 0 1.014</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.49</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.49</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_33">
+      <static>true</static>
+      <pose>-30.46 2.99 8.32 0 0 1.267</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.44</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.44</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_34">
+      <static>true</static>
+      <pose>-19.24 0.82 6.90 0 0 1.915</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.65</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.65</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_35">
+      <static>true</static>
+      <pose>-41.18 -5.46 8.61 0 0 1.821</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.01</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.01</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_36">
+      <static>true</static>
+      <pose>-37.45 6.21 9.98 0 0 1.117</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.80</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.80</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_37">
+      <static>true</static>
+      <pose>-40.36 1.37 9.83 0 0 0.114</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.68</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.68</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_38">
+      <static>true</static>
+      <pose>-47.45 0.09 10.42 0 0 0.096</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.60</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.60</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_39">
+      <static>true</static>
+      <pose>-33.75 0.04 8.61 0 0 3.461</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.99</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.99</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_40">
+      <static>true</static>
+      <pose>-19.49 -37.63 9.95 0 0 2.981</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.55</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.55</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_41">
+      <static>true</static>
+      <pose>-0.16 -29.74 11.70 0 0 0.667</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.15</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.15</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_42">
+      <static>true</static>
+      <pose>-46.58 -37.32 5.39 0 0 2.714</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.06</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.06</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_43">
+      <static>true</static>
+      <pose>-12.95 -43.45 10.31 0 0 5.241</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.80</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.80</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_44">
+      <static>true</static>
+      <pose>-37.34 -36.11 6.84 0 0 3.182</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.71</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.71</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_45">
+      <static>true</static>
+      <pose>-12.20 -57.08 8.88 0 0 6.170</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.95</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.95</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_46">
+      <static>true</static>
+      <pose>-12.23 -45.96 10.10 0 0 5.227</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.67</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.67</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_47">
+      <static>true</static>
+      <pose>-15.88 -46.36 10.14 0 0 3.994</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.97</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.97</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_48">
+      <static>true</static>
+      <pose>-14.86 -31.66 10.52 0 0 2.183</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.72</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.72</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_49">
+      <static>true</static>
+      <pose>-12.59 -35.58 10.78 0 0 0.815</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.44</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.44</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_50">
+      <static>true</static>
+      <pose>2.68 -43.26 10.02 0 0 4.653</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.46</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.46</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_51">
+      <static>true</static>
+      <pose>-13.80 -35.33 10.66 0 0 1.025</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.60</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.60</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_52">
+      <static>true</static>
+      <pose>22.90 47.37 2.25 0 0 5.283</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.47</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.47</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_53">
+      <static>true</static>
+      <pose>8.13 42.81 3.86 0 0 4.211</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.10</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.10</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_54">
+      <static>true</static>
+      <pose>28.77 62.76 4.20 0 0 1.521</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.63</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.63</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_55">
+      <static>true</static>
+      <pose>30.63 47.60 1.64 0 0 2.885</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.63</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.63</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_56">
+      <static>true</static>
+      <pose>17.38 45.78 2.68 0 0 2.800</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.53</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.53</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_57">
+      <static>true</static>
+      <pose>24.26 70.35 5.95 0 0 6.040</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.61</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.61</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_58">
+      <static>true</static>
+      <pose>9.36 70.09 6.11 0 0 3.436</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.18</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.18</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_59">
+      <static>true</static>
+      <pose>26.26 54.44 2.93 0 0 6.064</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.60</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.60</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_60">
+      <static>true</static>
+      <pose>-0.38 68.70 6.20 0 0 2.239</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.65</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.65</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_61">
+      <static>true</static>
+      <pose>16.50 50.62 3.38 0 0 2.397</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.40</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.40</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_62">
+      <static>true</static>
+      <pose>20.97 59.73 4.36 0 0 3.157</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.78</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.78</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_63">
+      <static>true</static>
+      <pose>30.85 46.86 1.55 0 0 3.170</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.56</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.56</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_64">
+      <static>true</static>
+      <pose>27.60 69.43 5.51 0 0 1.659</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.40</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.40</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_65">
+      <static>true</static>
+      <pose>30.44 54.42 2.54 0 0 2.509</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.47</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.47</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_66">
+      <static>true</static>
+      <pose>10.67 65.21 5.83 0 0 0.141</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.43</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.43</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_67">
+      <static>true</static>
+      <pose>18.41 57.16 4.15 0 0 1.462</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.64</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.64</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_68">
+      <static>true</static>
+      <pose>30.19 53.67 2.45 0 0 3.323</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.87</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.87</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_69">
+      <static>true</static>
+      <pose>-3.30 52.56 7.19 0 0 4.129</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.00</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.00</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_70">
+      <static>true</static>
+      <pose>0.68 63.41 6.54 0 0 5.521</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.97</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.97</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_71">
+      <static>true</static>
+      <pose>20.22 50.54 2.93 0 0 2.048</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.71</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.71</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_72">
+      <static>true</static>
+      <pose>17.28 63.54 5.29 0 0 0.939</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.19</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.19</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_73">
+      <static>true</static>
+      <pose>18.08 67.98 5.91 0 0 4.039</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.98</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.98</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_74">
+      <static>true</static>
+      <pose>-43.31 -14.58 6.93 0 0 5.246</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.44</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.44</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_75">
+      <static>true</static>
+      <pose>-66.41 73.80 0.39 0 0 3.940</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.11</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.11</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_76">
+      <static>true</static>
+      <pose>15.00 72.77 6.39 0 0 5.101</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.99</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.99</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_77">
+      <static>true</static>
+      <pose>-14.29 75.19 4.47 0 0 3.289</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.51</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.51</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_78">
+      <static>true</static>
+      <pose>4.23 -86.63 3.59 0 0 5.243</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.80</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.80</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_79">
+      <static>true</static>
+      <pose>-10.78 -57.04 8.65 0 0 5.190</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.04</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.04</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_80">
+      <static>true</static>
+      <pose>-89.29 53.85 0.60 0 0 5.607</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.87</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.87</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_81">
+      <static>true</static>
+      <pose>-58.98 -4.77 9.12 0 0 4.354</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.95</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.95</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_82">
+      <static>true</static>
+      <pose>40.53 10.17 2.89 0 0 0.196</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.58</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.58</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_83">
+      <static>true</static>
+      <pose>-31.32 3.30 8.49 0 0 2.265</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.51</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.51</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_84">
+      <static>true</static>
+      <pose>9.98 51.17 4.44 0 0 5.249</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.48</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.48</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_85">
+      <static>true</static>
+      <pose>-70.90 10.85 9.53 0 0 3.942</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.85</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.85</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_86">
+      <static>true</static>
+      <pose>-45.27 -40.15 5.88 0 0 4.275</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.90</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.90</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_87">
+      <static>true</static>
+      <pose>49.01 1.39 3.28 0 0 0.021</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.79</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.79</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_88">
+      <static>true</static>
+      <pose>11.11 46.80 3.74 0 0 4.699</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.04</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.04</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_89">
+      <static>true</static>
+      <pose>74.25 -10.22 0.80 0 0 3.361</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.80</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.80</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_90">
+      <static>true</static>
+      <pose>20.26 1.00 5.52 0 0 0.415</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.93</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.93</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_91">
+      <static>true</static>
+      <pose>2.19 34.69 4.17 0 0 1.584</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.99</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.99</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_92">
+      <static>true</static>
+      <pose>-8.58 5.99 2.15 0 0 1.668</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.46</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.46</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_93">
+      <static>true</static>
+      <pose>-3.95 79.47 4.38 0 0 1.289</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.98</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.98</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_94">
+      <static>true</static>
+      <pose>35.86 67.78 4.06 0 0 6.128</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.99</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.99</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_95">
+      <static>true</static>
+      <pose>79.59 -43.27 0.89 0 0 2.402</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.80</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.80</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_96">
+      <static>true</static>
+      <pose>10.71 79.79 6.05 0 0 4.294</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.78</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.78</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_97">
+      <static>true</static>
+      <pose>61.20 -65.32 2.33 0 0 3.875</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.01</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>2.01</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_98">
+      <static>true</static>
+      <pose>-68.11 -10.42 7.26 0 0 0.487</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.91</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.91</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_99">
+      <static>true</static>
+      <pose>-76.94 -46.69 3.31 0 0 1.595</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.52</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.52</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_100">
+      <static>true</static>
+      <pose>-76.84 30.50 5.10 0 0 1.912</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.99</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.99</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="tree_101">
+      <static>true</static>
+      <pose>51.11 71.46 1.77 0 0 0.078</pose>
+      <link name="link">
+        <collision name="trunk_c"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry></collision>
+        <visual name="trunk_v"><pose>0 0 1.5 0 0 0</pose><geometry><cylinder><radius>0.22</radius><length>3.0</length></cylinder></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+        <collision name="canopy_c"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.85</radius></sphere></geometry></collision>
+        <visual name="canopy_v"><pose>0 0 4.5 0 0 0</pose><geometry><sphere><radius>1.85</radius></sphere></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Green</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_0">
+      <static>true</static>
+      <pose>-54.89 -31.81 4.64 0 0 2.845</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.93 2.05 1.05</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.93 2.05 1.05</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_1">
+      <static>true</static>
+      <pose>-53.84 -29.97 4.74 0 0 1.533</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.13 1.81 0.97</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.13 1.81 0.97</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_2">
+      <static>true</static>
+      <pose>-56.06 -28.10 4.63 0 0 1.622</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.88 1.49 0.85</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.88 1.49 0.85</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_3">
+      <static>true</static>
+      <pose>-54.19 -27.43 5.03 0 0 2.404</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.51 2.02 1.32</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.51 2.02 1.32</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_4">
+      <static>true</static>
+      <pose>-51.15 -28.99 4.92 0 0 3.128</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.79 0.94 0.80</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.79 0.94 0.80</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_5">
+      <static>true</static>
+      <pose>-45.75 -28.71 5.72 0 0 0.582</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.52 1.18 1.26</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.52 1.18 1.26</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_6">
+      <static>true</static>
+      <pose>-54.55 -12.05 7.61 0 0 5.991</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>2.03 1.22 1.21</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>2.03 1.22 1.21</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_7">
+      <static>true</static>
+      <pose>-60.15 -4.18 9.28 0 0 2.670</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.96 2.00 0.52</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.96 2.00 0.52</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_8">
+      <static>true</static>
+      <pose>-56.09 2.09 11.74 0 0 0.001</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.82 1.89 1.57</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.82 1.89 1.57</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_9">
+      <static>true</static>
+      <pose>-56.93 -1.08 10.78 0 0 6.106</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.23 2.08 1.41</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.23 2.08 1.41</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_10">
+      <static>true</static>
+      <pose>-55.60 -2.08 10.17 0 0 5.913</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.00 0.77 0.67</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.00 0.77 0.67</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_11">
+      <static>true</static>
+      <pose>-56.37 -5.39 9.52 0 0 0.534</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.75 1.64 1.34</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.75 1.64 1.34</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_12">
+      <static>true</static>
+      <pose>57.64 1.57 2.22 0 0 4.054</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.84 0.60 0.64</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.84 0.60 0.64</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_13">
+      <static>true</static>
+      <pose>69.64 36.60 0.28 0 0 4.387</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.09 0.80 0.78</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.09 0.80 0.78</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_14">
+      <static>true</static>
+      <pose>-48.35 71.59 1.51 0 0 2.437</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.78 0.71 1.08</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.78 0.71 1.08</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_15">
+      <static>true</static>
+      <pose>-2.49 -85.53 3.52 0 0 6.257</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.96 1.56 0.51</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.96 1.56 0.51</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_16">
+      <static>true</static>
+      <pose>-89.35 -1.49 5.13 0 0 2.985</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.05 1.11 1.42</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.05 1.11 1.42</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_17">
+      <static>true</static>
+      <pose>-8.86 -35.65 11.68 0 0 0.347</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.98 1.00 1.56</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.98 1.00 1.56</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_18">
+      <static>true</static>
+      <pose>-64.67 -28.09 4.45 0 0 1.616</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.91 2.02 1.21</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.91 2.02 1.21</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_19">
+      <static>true</static>
+      <pose>-33.11 61.24 4.91 0 0 4.370</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.67 2.08 0.75</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.67 2.08 0.75</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_20">
+      <static>true</static>
+      <pose>-89.69 45.13 1.31 0 0 5.006</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.75 1.18 0.94</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.75 1.18 0.94</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_21">
+      <static>true</static>
+      <pose>61.04 -68.39 2.56 0 0 1.958</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.78 1.41 0.73</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.78 1.41 0.73</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_22">
+      <static>true</static>
+      <pose>76.75 38.34 0.21 0 0 0.685</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.91 0.97 0.74</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.91 0.97 0.74</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_23">
+      <static>true</static>
+      <pose>72.28 -37.83 1.93 0 0 2.619</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.60 1.58 1.49</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.60 1.58 1.49</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_24">
+      <static>true</static>
+      <pose>89.78 16.05 0.18 0 0 0.341</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.66 2.12 0.66</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.66 2.12 0.66</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_25">
+      <static>true</static>
+      <pose>-40.47 -81.31 5.57 0 0 1.156</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.64 1.55 0.96</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.64 1.55 0.96</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_26">
+      <static>true</static>
+      <pose>-71.69 60.24 1.22 0 0 6.264</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.32 1.74 0.85</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.32 1.74 0.85</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_27">
+      <static>true</static>
+      <pose>-38.59 78.41 1.42 0 0 0.200</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>2.09 1.13 0.70</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>2.09 1.13 0.70</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_28">
+      <static>true</static>
+      <pose>-45.12 -42.17 6.42 0 0 2.778</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.66 1.21 0.91</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.66 1.21 0.91</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_29">
+      <static>true</static>
+      <pose>1.97 -55.83 7.62 0 0 6.001</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.77 0.73 0.59</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.77 0.73 0.59</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_30">
+      <static>true</static>
+      <pose>-22.80 82.11 2.31 0 0 4.828</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.80 2.14 0.73</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.80 2.14 0.73</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_31">
+      <static>true</static>
+      <pose>69.17 56.15 0.22 0 0 1.229</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.09 1.89 0.60</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.09 1.89 0.60</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_32">
+      <static>true</static>
+      <pose>23.56 74.42 6.70 0 0 0.190</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.47 1.31 0.86</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.47 1.31 0.86</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_33">
+      <static>true</static>
+      <pose>79.33 8.86 0.74 0 0 2.359</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.26 1.90 1.34</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.26 1.90 1.34</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_34">
+      <static>true</static>
+      <pose>39.52 -81.09 0.94 0 0 4.693</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.34 1.89 0.57</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.34 1.89 0.57</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_35">
+      <static>true</static>
+      <pose>41.82 -8.85 6.43 0 0 1.646</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>2.04 1.14 0.80</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>2.04 1.14 0.80</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_36">
+      <static>true</static>
+      <pose>45.48 26.01 1.07 0 0 4.531</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.75 1.11 0.80</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.75 1.11 0.80</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_37">
+      <static>true</static>
+      <pose>-38.48 -81.18 5.96 0 0 0.152</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.55 1.89 1.54</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.55 1.89 1.54</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_38">
+      <static>true</static>
+      <pose>76.82 -67.08 5.46 0 0 4.960</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.97 1.36 1.55</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>0.97 1.36 1.55</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_39">
+      <static>true</static>
+      <pose>-5.01 -28.14 11.63 0 0 1.149</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>2.06 1.90 0.65</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>2.06 1.90 0.65</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_40">
+      <static>true</static>
+      <pose>-36.40 43.03 7.40 0 0 3.814</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.88 1.78 1.41</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.88 1.78 1.41</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_41">
+      <static>true</static>
+      <pose>85.73 -43.17 0.95 0 0 3.215</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.12 1.11 0.90</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.12 1.11 0.90</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_42">
+      <static>true</static>
+      <pose>28.08 -35.85 12.43 0 0 3.025</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.23 0.86 0.95</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.23 0.86 0.95</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_43">
+      <static>true</static>
+      <pose>10.32 -19.01 11.06 0 0 6.204</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.47 0.86 0.97</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.47 0.86 0.97</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rock_44">
+      <static>true</static>
+      <pose>-59.88 -60.90 5.81 0 0 6.207</pose>
+      <link name="link">
+        <collision name="rock_c"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.02 0.73 0.61</size></box></geometry></collision>
+        <visual name="rock_v"><pose>0 0 0 0 0 0</pose><geometry><box><size>1.02 0.73 0.61</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="house">
+      <static>true</static>
+      <pose>-25.00 -20.00 8.23 0 0 0.300</pose>
+      <link name="link">
+        <collision name="body_c"><pose>0 0 2.5 0 0 0</pose><geometry><box><size>12 9 5</size></box></geometry></collision>
+        <visual name="body_v"><pose>0 0 2.5 0 0 0</pose><geometry><box><size>12 9 5</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Grey</name></script></material></visual>
+        <collision name="roof_c"><pose>0 0 5.25 0 0 0</pose><geometry><box><size>12.6 9.6 0.5</size></box></geometry></collision>
+        <visual name="roof_v"><pose>0 0 5.25 0 0 0</pose><geometry><box><size>12.6 9.6 0.5</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Red</name></script></material></visual>
+        <collision name="door_c"><pose>0 -4.55 1.1 0 0 0</pose><geometry><box><size>1.2 0.1 2.2</size></box></geometry></collision>
+        <visual name="door_v"><pose>0 -4.55 1.1 0 0 0</pose><geometry><box><size>1.2 0.1 2.2</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/DarkGrey</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_0">
+      <static>true</static>
+      <pose>-40.00 -40.00 6.81 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_0">
+      <static>true</static>
+      <pose>-38.00 -40.00 7.19 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_1">
+      <static>true</static>
+      <pose>-36.00 -40.00 7.57 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_1">
+      <static>true</static>
+      <pose>-34.00 -40.00 7.94 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_2">
+      <static>true</static>
+      <pose>-32.00 -40.00 8.29 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_2">
+      <static>true</static>
+      <pose>-30.00 -40.00 8.63 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_3">
+      <static>true</static>
+      <pose>-28.00 -40.00 8.94 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_3">
+      <static>true</static>
+      <pose>-26.00 -40.00 9.23 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_4">
+      <static>true</static>
+      <pose>-24.00 -40.00 9.49 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_4">
+      <static>true</static>
+      <pose>-22.00 -40.00 9.73 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_5">
+      <static>true</static>
+      <pose>-20.00 -40.00 9.95 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_5">
+      <static>true</static>
+      <pose>-18.00 -40.00 10.14 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_6">
+      <static>true</static>
+      <pose>-16.00 -40.00 10.32 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_6">
+      <static>true</static>
+      <pose>-14.00 -40.00 10.47 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_7">
+      <static>true</static>
+      <pose>-12.00 -40.00 10.60 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_7">
+      <static>true</static>
+      <pose>-10.00 -40.00 10.70 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_8">
+      <static>true</static>
+      <pose>-8.00 -40.00 10.77 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_8">
+      <static>true</static>
+      <pose>-6.00 -40.00 10.82 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_9">
+      <static>true</static>
+      <pose>-4.00 -40.00 10.83 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_9">
+      <static>true</static>
+      <pose>-2.00 -40.00 10.81 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_10">
+      <static>true</static>
+      <pose>0.00 -40.00 10.75 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_10">
+      <static>true</static>
+      <pose>2.00 -40.00 10.67 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_11">
+      <static>true</static>
+      <pose>4.00 -40.00 10.56 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_11">
+      <static>true</static>
+      <pose>6.00 -40.00 10.45 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_12">
+      <static>true</static>
+      <pose>8.00 -40.00 10.32 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_12">
+      <static>true</static>
+      <pose>10.00 -40.00 10.21 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_13">
+      <static>true</static>
+      <pose>12.00 -40.00 10.13 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_13">
+      <static>true</static>
+      <pose>14.00 -40.00 10.08 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_14">
+      <static>true</static>
+      <pose>16.00 -40.00 10.08 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_14">
+      <static>true</static>
+      <pose>18.00 -40.00 10.15 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_15">
+      <static>true</static>
+      <pose>20.00 -40.00 10.29 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_15">
+      <static>true</static>
+      <pose>22.00 -40.00 10.49 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_16">
+      <static>true</static>
+      <pose>24.00 -40.00 10.76 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_16">
+      <static>true</static>
+      <pose>26.00 -40.00 11.07 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_17">
+      <static>true</static>
+      <pose>28.00 -40.00 11.41 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_17">
+      <static>true</static>
+      <pose>30.00 -40.00 11.75 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_18">
+      <static>true</static>
+      <pose>32.00 -40.00 12.06 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_18">
+      <static>true</static>
+      <pose>34.00 -40.00 12.31 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_19">
+      <static>true</static>
+      <pose>36.00 -40.00 12.45 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="rail_19">
+      <static>true</static>
+      <pose>38.00 -40.00 12.47 0 0 0.000</pose>
+      <link name="link">
+        <collision name="rail_c"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry></collision>
+        <visual name="rail_v"><pose>0 0 1.1 0 0 0</pose><geometry><box><size>4.0 0.06 0.06</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+    <model name="post_20">
+      <static>true</static>
+      <pose>40.00 -40.00 12.34 0 0 0.000</pose>
+      <link name="link">
+        <collision name="post_c"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry></collision>
+        <visual name="post_v"><pose>0 0 0.7 0 0 0</pose><geometry><box><size>0.12 0.12 1.4</size></box></geometry><material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/Wood</name></script></material></visual>
+      </link>
+    </model>
+  </world>
+</sdf>
