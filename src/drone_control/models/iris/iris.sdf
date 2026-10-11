@@ -585,17 +585,12 @@
       <accelerometerBiasCorrelationTime>300.0</accelerometerBiasCorrelationTime>
       <accelerometerTurnOnBiasSigma>0.196</accelerometerTurnOnBiasSigma>
     </plugin>
-  <plugin name="gt_p3d" filename="libgazebo_ros_p3d.so">
+  
+    <plugin name="gt_p3d" filename="libgazebo_ros_p3d.so">
       <ros><namespace>/iris</namespace><remapping>odom:=ground_truth/odom</remapping></ros>
       <frame_name>map</frame_name>
       <body_name>base_link</body_name>
       <update_rate>100</update_rate>
     </plugin>
-  <plugin name="gt_p3d" filename="libgazebo_ros_p3d.so">
-      <ros><namespace>/iris</namespace><remapping>odom:=ground_truth/odom</remapping></ros>
-      <frame_name>map</frame_name>
-      <body_name>base_link</body_name>
-      <update_rate>100</update_rate>
-    </plugin>
-  </model>
+</model>
 </sdf>
