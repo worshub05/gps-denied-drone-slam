@@ -23,6 +23,7 @@ setup(
     entry_points={
         'console_scripts': [
             'takeoff_hover = drone_control.takeoff_hover:main',
+            'square_flight = drone_control.square_flight:main',
         ],
     },
 )
