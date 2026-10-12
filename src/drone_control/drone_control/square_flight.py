@@ -16,7 +16,9 @@ WAYPOINTS = [
     (0.0, 5.0, -2.5),
     (0.0, 0.0, -2.5),
 ]
-ARRIVE_DISTANCE = 0.5
+ARRIVE_DISTANCE = 0.5   # m, how close counts as at the corner
+ARRIVE_SPEED = 0.3      # m/s, drone must be nearly stopped
+HOLD_TIME = 1.5         # s, must stay at the corner this long before moving on
 
 
 class SquareFlight(Node):
@@ -30,9 +32,11 @@ class SquareFlight(Node):
         )
         self.offset_us = None
         self.pos = None
+        self.vel = (0.0, 0.0, 0.0)
         self.wp = 0
         self.counter = 0
         self.landing_sent = False
+        self.hold_start = None
         self.create_subscription(TimesyncStatus, '/fmu/out/timesync_status', self.on_timesync, qos)
         self.create_subscription(VehicleLocalPosition, '/fmu/out/vehicle_local_position', self.on_pos, qos)
         self.offboard_pub = self.create_publisher(OffboardControlMode, '/fmu/in/offboard_control_mode', qos)
@@ -46,6 +50,7 @@ class SquareFlight(Node):
 
     def on_pos(self, msg):
         self.pos = (msg.x, msg.y, msg.z)
+        self.vel = (msg.vx, msg.vy, msg.vz)
 
     def now_us(self):
         return self.get_clock().now().nanoseconds // 1000 - self.offset_us
@@ -83,13 +88,22 @@ class SquareFlight(Node):
 
         target = WAYPOINTS[min(self.wp, len(WAYPOINTS) - 1)]
         if self.pos is not None and self.wp < len(WAYPOINTS):
-            if math.dist(self.pos, target) < ARRIVE_DISTANCE:
-                self.get_logger().info(f'reached waypoint {self.wp}: {target}')
-                self.wp += 1
-                if self.wp == len(WAYPOINTS) and not self.landing_sent:
-                    self.send_command(CMD_NAV_LAND)
-                    self.landing_sent = True
-                    self.get_logger().info('square done, landing')
+            now = self.get_clock().now().nanoseconds / 1e9
+            speed = math.dist(self.vel, (0.0, 0.0, 0.0))
+            at_corner = math.dist(self.pos, target) < ARRIVE_DISTANCE and speed < ARRIVE_SPEED
+            if at_corner:
+                if self.hold_start is None:
+                    self.hold_start = now
+                elif now - self.hold_start >= HOLD_TIME:
+                    self.get_logger().info(f'reached waypoint {self.wp}: {target}')
+                    self.wp += 1
+                    self.hold_start = None
+                    if self.wp == len(WAYPOINTS) and not self.landing_sent:
+                        self.send_command(CMD_NAV_LAND)
+                        self.landing_sent = True
+                        self.get_logger().info('square done, landing')
+            else:
+                self.hold_start = None
 
         sp = TrajectorySetpoint()
         sp.timestamp = self.now_us()
