@@ -6,3 +6,4 @@ log/
 rosbags/
 __pycache__/
 src/px4_msgs/
+bags/
