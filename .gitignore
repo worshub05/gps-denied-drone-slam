@@ -7,3 +7,9 @@ rosbags/
 __pycache__/
 src/px4_msgs/
 bags/
+build/
+install/
+log/
+src/FAST_LIO/
+src/livox_ros_driver2/
+src/Livox-SDK2/
