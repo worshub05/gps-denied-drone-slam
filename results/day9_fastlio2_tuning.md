@@ -12,3 +12,11 @@ Command: evo_ape tum <run>_gt.tum <run>_est.tum -a --t_max_diff 0.1 (SE(3) Umeya
 Run-to-run variation (04 vs 06): about 0.004 m RMSE.
 Keeping every point is a real regression; point_filter_num stays at 4.
 PX4 estimator baseline rmse: 0.080750 m.
+
+| 07  | filter_size_map 0.3 (was 0.5)        | 0.119943 | 0.080324 | 0.739230 |
+
+Run 07: median improved (0.038 vs ~0.065 m) but max worsened (0.74 vs 0.40-0.48 m); RMSE unchanged.
+Kept filter_size_map 0.5: fewer large jumps matters more for closed-loop flight on SLAM.
+Extrinsic not tuned: lidar offset [0, 0, 0.12] is taken directly from the drone model.
+
+Final Day 9 config: point_filter_num 4, filter_size_surf 0.5, filter_size_map 0.5, rmse ~0.12 m.
