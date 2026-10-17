@@ -31,7 +31,7 @@ class RingTimeRelay(Node):
             elev = math.degrees(math.atan2(z, math.hypot(x, y)))
             ring = int(round((elev + HALF_FOV_DEG) / (2 * HALF_FOV_DEG / (RINGS - 1))))
             ring = min(RINGS - 1, max(0, ring))
-            out.append((float(x), float(y), float(z), float(inten), float(i) / n * 1e5, ring))
+            out.append((float(x), float(y), float(z), float(inten), ((math.atan2(y, x) + math.pi) / (2 * math.pi)) * 1e5, ring))
         self.pub.publish(pc2.create_cloud(msg.header, FIELDS, out))
 
 def main():
