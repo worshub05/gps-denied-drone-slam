@@ -12,3 +12,9 @@ Live odometry rate ~9.9 Hz with brief dips to ~7.5 Hz.
 Same data replayed gives less than half the error, so the live degradation comes from
 CPU contention (Gazebo + relay + FAST-LIO2 + RViz), not the config or the flight.
 RViz was measured at ~119% CPU during replay. Next: live run with rviz:=false.
+
+| live_03    | live with Gazebo, RViz off (rviz:=false)           | 0.122877 | 0.050553   | 0.394951 | 664  |
+
+Turning RViz off brings live error back to the bag-replay level (~0.12 m) and removes the large spikes.
+Remaining gap to replay_03 (0.088 m) is attributed to Gazebo and FAST-LIO2 sharing the CPU.
+Decision: always run FAST-LIO2 with rviz:=false during live flights.
