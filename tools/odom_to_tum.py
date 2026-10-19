@@ -14,7 +14,7 @@ while r.has_next():
         continue
     m = deserialize_message(data, Odometry)
     p, q = m.pose.pose.position, m.pose.pose.orientation
-    line = f"{stamp/1e9:.9f} {p.x} {p.y} {p.z} {q.x} {q.y} {q.z} {q.w}"
+    line = f"{m.header.stamp.sec + m.header.stamp.nanosec * 1e-9:.9f} {p.x} {p.y} {p.z} {q.x} {q.y} {q.z} {q.w}"
     (gt if topic == '/iris/ground_truth/odom' else est).append(line)
 with open(out_prefix + '_gt.tum', 'w') as f:
     f.write('\n'.join(gt) + '\n')
