@@ -25,3 +25,24 @@ True path while airborne: x -3.67..11.72, y -1.78..7.18 (planned about x -2..9, 
 Near miss: reached x 11.72, ~0.15 m from the east wall face (x 12). Estimate error
 (up to 1.45 m) plus corner overshoot (up to ~1.5 m) pushed the drone 2.7 m beyond the plan.
 Closed-loop SLAM error is ~2.5x the open-loop (GPS-flown) error on the same path.
+
+## Lawnmower, slower (slam_lawn_02)
+Change: MPC_XY_VEL_MAX 2.0 m/s (PX4 default 12.0; restore later). Safety: tools/gt_geofence.py
+(ground-truth fence x -5.5..10.5, y -4.5..7.0; sim-only). No geofence breach.
+FAST-LIO2 estimate vs ground truth (evo_ape -a): rmse 0.240509, mean 0.183880,
+median 0.093773, max 0.947808 m. True path 158.0 m in 297 s (about 120 s on the ground).
+Error over time (30 s windows, mean/max m): ground 0.09/0.09 for 0-90 s; airborne
+0.17/0.70, 0.42/0.85, 0.20/0.44, 0.24/0.47, 0.31/0.95, 0.13/0.39; ground 0.09 at the end.
+No growth over time (fast run rose to 1.33 m at the end).
+True path while airborne: x -2.95..10.43, y -2.22..6.88. Came within 0.07 m of the
+fence limit (x 10.5) and ~1.4 m of the east wall face: still ~1.4 m beyond the planned box.
+
+## Day 13 summary
+| Flight (SLAM only, GPS off) | Speed       | RMSE (m) | Max (m) | True path |
+|-----------------------------|-------------|----------|---------|-----------|
+| square (slam_square_01)     | default     | 0.085    | 0.387   | ~25 m     |
+| lawnmower (slam_lawn_01)    | default     | 0.735    | 1.447   | 177.6 m   |
+| lawnmower (slam_lawn_02)    | 2 m/s limit | 0.241    | 0.948   | 158.0 m   |
+Slowing to 2 m/s cut lawnmower error by about two thirds and stopped the drift growth.
+Ground time is included in these RMSE values; airborne-only figures to be computed on Day 14.
+Planning rule for Week 3: keep planned paths at least 2 m from obstacles.
