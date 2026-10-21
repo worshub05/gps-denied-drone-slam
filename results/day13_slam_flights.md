@@ -46,3 +46,12 @@ fence limit (x 10.5) and ~1.4 m of the east wall face: still ~1.4 m beyond the p
 Slowing to 2 m/s cut lawnmower error by about two thirds and stopped the drift growth.
 Ground time is included in these RMSE values; airborne-only figures to be computed on Day 14.
 Planning rule for Week 3: keep planned paths at least 2 m from obstacles.
+
+## Correction (Day 15)
+outdoor_v1b.world was never loaded: the launch file was edited in src/ but ros2 launch used
+the unchanged install/ copy, so Gazebo ran outdoor_v1.world (confirmed with gz model: wall_east
+and wall_west not found, wall_1 present). All Day 12-14 flights ran in outdoor_v1.
+- Day 12: the stable second hover was not caused by added walls. The first hover's east-west
+  drift is real; the degeneracy explanation is plausible but untested.
+- Day 13/14: the "world gained walls" caveat is void. SLAM-only and GPS-flown lawnmower runs
+  used the same world, so that comparison is like-for-like.

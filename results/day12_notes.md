@@ -33,3 +33,12 @@ Hover 2, outdoor_v1b: stable. Truth x 1.00-1.43 m (returned to 1.01), y 1.02-1.0
 z 2.62-2.67 m over 25 s. PX4 estimate held within ~0.1 m of the setpoint.
 Landing: auto-land after offboard stopped, truth z 0.10 m, disarmed. FAST-LIO2 after landing
 (-0.04, -0.09, 0.05), within 0.1 m of the takeoff point and steady.
+
+## Correction (Day 15)
+outdoor_v1b.world was never loaded: the launch file was edited in src/ but ros2 launch used
+the unchanged install/ copy, so Gazebo ran outdoor_v1.world (confirmed with gz model: wall_east
+and wall_west not found, wall_1 present). All Day 12-14 flights ran in outdoor_v1.
+- Day 12: the stable second hover was not caused by added walls. The first hover's east-west
+  drift is real; the degeneracy explanation is plausible but untested.
+- Day 13/14: the "world gained walls" caveat is void. SLAM-only and GPS-flown lawnmower runs
+  used the same world, so that comparison is like-for-like.

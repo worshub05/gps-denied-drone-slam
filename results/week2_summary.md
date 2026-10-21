@@ -23,3 +23,12 @@ SE(3) Umeyama alignment fitted on the airborne part, message header timestamps
 - Default speed with SLAM in the loop doubles the error (0.646 m) and caused a near miss.
 - Known limits: east-west degeneracy without walls (Day 12), ~1.4 m beyond-plan excursions
   even at 2 m/s, results from single runs, small simulated world with few features.
+
+## Correction (Day 15)
+outdoor_v1b.world was never loaded: the launch file was edited in src/ but ros2 launch used
+the unchanged install/ copy, so Gazebo ran outdoor_v1.world (confirmed with gz model: wall_east
+and wall_west not found, wall_1 present). All Day 12-14 flights ran in outdoor_v1.
+- Day 12: the stable second hover was not caused by added walls. The first hover's east-west
+  drift is real; the degeneracy explanation is plausible but untested.
+- Day 13/14: the "world gained walls" caveat is void. SLAM-only and GPS-flown lawnmower runs
+  used the same world, so that comparison is like-for-like.
