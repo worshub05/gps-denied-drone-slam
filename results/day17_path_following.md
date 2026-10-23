@@ -15,3 +15,4 @@ takeoff point) with the planned route and the Day 15 obstacle map.
 Deviation stayed under 1 m (vs ~1.4 m excursions on the Day 13 lawnmower).
 The 1.13 m landing offset combines SLAM error, drift during descent, and ~0.2 m
 map-origin uncertainty (map origin = survey takeoff point, assumed equal to this takeoff).
+Flight: all 6 waypoints reached in ~23 s (waypoint 0 to goal); geofence never triggered.
