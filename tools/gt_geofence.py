@@ -26,7 +26,7 @@ class Geofence(Node):
             self.tripped = True
             self.get_logger().error(
                 f'GEOFENCE BREACH at x={p.x:.2f} y={p.y:.2f}, stopping flight script')
-            subprocess.run(['pkill', '-9', '-f', 'square_flight|lawnmower_flight|takeoff_hover'])
+            subprocess.run(['pkill', '-9', '-f', 'square_flight|lawnmower_flight|takeoff_hover|follow_path'])
 
 
 def main():
