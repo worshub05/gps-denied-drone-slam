@@ -1,0 +1,103 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Map
+      Name: Obstacle map
+      Enabled: true
+      Alpha: 0.6
+      Color Scheme: map
+      Draw Behind: true
+      Topic:
+        Depth: 1
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /demo/map
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Lidar (FAST-LIO2)
+      Enabled: true
+      Style: Points
+      Size (Pixels): 2
+      Decay Time: 2
+      Color Transformer: AxisColor
+      Axis: Z
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Best Effort
+        Value: /cloud_registered
+    - Class: rviz_default_plugins/Path
+      Name: Planned route
+      Enabled: true
+      Color: 0; 120; 255
+      Line Style: Billboards
+      Line Width: 0.15
+      Topic:
+        Depth: 1
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /demo/planned
+    - Class: rviz_default_plugins/Path
+      Name: Flown (ground truth)
+      Enabled: true
+      Color: 230; 40; 40
+      Line Style: Billboards
+      Line Width: 0.08
+      Topic:
+        Depth: 1
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /demo/flown_truth
+    - Class: rviz_default_plugins/Path
+      Name: Flown (SLAM estimate)
+      Enabled: true
+      Color: 0; 170; 0
+      Line Style: Billboards
+      Line Width: 0.05
+      Topic:
+        Depth: 1
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /demo/flown_slam
+    - Class: rviz_default_plugins/Odometry
+      Name: Drone
+      Enabled: true
+      Keep: 1
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /Odometry
+    - Class: rviz_default_plugins/Pose
+      Name: Goal
+      Enabled: true
+      Color: 255; 170; 0
+      Topic:
+        Depth: 1
+        Durability Policy: Volatile
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /demo/goal
+  Global Options:
+    Background Color: 255; 255; 255
+    Fixed Frame: camera_init
+    Frame Rate: 30
+  Views:
+    Current:
+      Class: rviz_default_plugins/TopDownOrtho
+      Name: Current View
+      Scale: 28
+      X: 3.5
+      Y: 5
+      Angle: 0
+Window Geometry:
+  Width: 1280
+  Height: 800
