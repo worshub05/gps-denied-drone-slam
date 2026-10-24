@@ -1,5 +1,7 @@
 # GPS-Denied Drone Navigation with Lidar-Inertial SLAM
 
+**Shubham Worlikar** · [LinkedIn](https://www.linkedin.com/in/shubham-worlikar-7a5b33279) · [GitHub](https://github.com/worshub05)
+
 Autonomous quadrotor navigation without GPS, in simulation. A PX4 drone localises itself with
 FAST-LIO2 (3D lidar + IMU), builds an obstacle map, plans a safe route with A*, and flies around
 obstacles to a goal it cannot see from takeoff, with GPS and magnetometer disabled.
@@ -185,3 +187,7 @@ python3 tools/eval_path_follow.py <bag> maps/path_behind_wall.json
 ```
 
 Stop everything with `tools/stop_all.sh`.
+
+## Author
+
+**Shubham Worlikar**: [LinkedIn](https://www.linkedin.com/in/shubham-worlikar-7a5b33279), [GitHub](https://github.com/worshub05)
