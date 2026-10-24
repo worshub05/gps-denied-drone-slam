@@ -166,6 +166,8 @@ cd ~/PX4-Autopilot/build/px4_sitl_default/bin
 
 To fly with GPS again: `EKF2_EV_CTRL 0`, `EKF2_GPS_CTRL 7`, `EKF2_HGT_REF 1`, `EKF2_MAG_TYPE 0`.
 
+Or use the helper: `tools/px4_params.sh slam` / `tools/px4_params.sh gps`.
+
 ## Running a GPS-denied flight
 
 Start each in its own terminal (after `source ~/gpsdenied_ws/install/setup.bash`):
