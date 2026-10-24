@@ -109,6 +109,10 @@ Details: [Day 15](results/day15_mapping.md), [Day 16](results/day16_planner.md),
 - Planning is 2D, at a fixed flight height.
 - The map frame assumes takeoff from the same spawn pose as the survey (about 0.2 m agreement).
 
+## Future work
+
+Planned next steps (walls test, repeat runs, noise and wind, voice control, harder worlds, moving obstacles): [docs/ROADMAP.md](docs/ROADMAP.md).
+
 ## Repository layout
 
 | Path | Contents |
