@@ -6,7 +6,7 @@ import rclpy
 from rclpy.node import Node
 from nav_msgs.msg import Odometry
 
-LIMITS = {'x_min': -5.5, 'x_max': 12.0, 'y_min': -4.5, 'y_max': 14.0}
+LIMITS = {'x_min': -5.5, 'x_max': 12.0, 'y_min': -4.5, 'y_max': 14.0, 'z_max': 5.0}
 # keep-out boxes around obstacles (world frame: obstacle extent + 1 m)
 EXCLUDE = {'north_wall': (-6.6, 6.2, 6.4, 9.2), 'rock_1': (4.0, 8.0, 0.0, 4.0)}
 
@@ -23,7 +23,7 @@ class Geofence(Node):
         if self.tripped or p.z < 1.0:
             return
         inside = (LIMITS['x_min'] < p.x < LIMITS['x_max'] and
-                  LIMITS['y_min'] < p.y < LIMITS['y_max'])
+                  LIMITS['y_min'] < p.y < LIMITS['y_max'] and p.z < LIMITS['z_max'])
         hit = [n for n, (x0, x1, y0, y1) in EXCLUDE.items() if x0 < p.x < x1 and y0 < p.y < y1]
         if not inside or hit:
             self.tripped = True
