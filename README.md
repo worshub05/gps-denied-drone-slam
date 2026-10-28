@@ -90,10 +90,11 @@ Details: [Day 15](results/day15_mapping.md), [Day 16](results/day16_planner.md),
    Limiting speed to 2 m/s gave 0.320 m with no drift growth over time.
 4. **The lidar sees the drone's own rotors.** Returns just beyond FAST-LIO2's 0.3 m cutoff
    created a false obstacle over the whole flight area. A 1 m self-filter in the mapper fixed it.
-5. **A hover drift is not fully explained.** The first SLAM-only hover drifted 1.75 m east-west
-   while the estimate stayed near zero. A later hover in the same world was stable. Geometric
-   degeneracy (few surfaces constraining east-west motion) is the suspected cause; it has not
-   been confirmed experimentally.
+5. **East-west hover drift comes from missing geometry (degeneracy).** In the original world,
+   where only a north wall and two thin trees constrain east-west motion, three SLAM-only hovers
+   drifted east by 0.24-3.92 m while the estimate stayed near zero. With two east/west-facing
+   walls added, two hovers of 6-7 minutes stayed within 0.17 m. Small sample (3 vs 2 runs);
+   see [results/day23_walls_test.md](results/day23_walls_test.md).
 6. **Evaluation pitfalls, caught and corrected:** time spent on the ground inflated accuracy
    (all headline figures are now airborne-only); FAST-LIO2 (x forward, y left, z up) and PX4
    (x forward, y right, z down) frames differ, with a 90-degree heading offset to north; and a
