@@ -1,6 +1,7 @@
 # Simulator-only safety net: stops the flight script if ground truth leaves a safe box,
 # so PX4's failsafe lands the drone. Uses ground truth because PX4's own geofence relies
 # on the same SLAM estimate that may be wrong.
+import os
 import subprocess
 import rclpy
 from rclpy.node import Node
@@ -9,6 +10,8 @@ from nav_msgs.msg import Odometry
 LIMITS = {'x_min': -5.5, 'x_max': 12.0, 'y_min': -4.5, 'y_max': 14.0, 'z_max': 5.0}
 # keep-out boxes around obstacles (world frame: obstacle extent + 1 m)
 EXCLUDE = {'north_wall': (-6.6, 6.2, 6.4, 9.2), 'rock_1': (4.0, 8.0, 0.0, 4.0)}
+if os.environ.get('GPSD_WORLD', 'outdoor_v1') == 'outdoor_v1b':
+    EXCLUDE.update({'east_wall': (10.85, 13.2, -5.0, 7.0), 'west_wall': (-8.2, -5.8, -5.0, 7.0)})
 
 
 class Geofence(Node):

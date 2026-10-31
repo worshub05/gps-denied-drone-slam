@@ -74,6 +74,8 @@ Full method and per-run details: [results/week2_summary.md](results/week2_summar
 | Planner, around the wall (`behind_wall`) | 21.7 m, minimum planned clearance 2.40 m |
 | Flight, `past_rock` (GPS off) | max 0.97 m from route, min real clearance 2.86 m, landed 1.13 m from goal |
 | Flight, `behind_wall` (GPS off) | max 0.82 m from route, min real clearance 2.06 m, landed 0.49 m from goal, 44 s |
+| Repeats, original world (4 runs) | mean deviation 0.56 m, max 0.82-2.54 m, min clearance 1.60-2.20 m, landed 0.49-2.69 m from goal |
+| Repeats, with east/west walls (2 runs) | mean deviation 0.18 m, max 0.60-0.61 m, min clearance 2.28-2.34 m, landed 0.20-0.54 m from goal |
 
 Details: [Day 15](results/day15_mapping.md), [Day 16](results/day16_planner.md),
 [Day 17](results/day17_path_following.md), [Day 18](results/day18_demo.md).
@@ -93,8 +95,10 @@ Details: [Day 15](results/day15_mapping.md), [Day 16](results/day16_planner.md),
 5. **East-west hover drift comes from missing geometry (degeneracy).** In the original world,
    where only a north wall and two thin trees constrain east-west motion, three SLAM-only hovers
    drifted east by 0.24-3.92 m while the estimate stayed near zero. With two east/west-facing
-   walls added, two hovers of 6-7 minutes stayed within 0.17 m. Small sample (3 vs 2 runs);
-   see [results/day23_walls_test.md](results/day23_walls_test.md).
+   walls added, two hovers of 6-7 minutes stayed within 0.17 m,
+   and the drone's deviation from a planned route fell by about 60%. Small samples
+   (3 vs 2 hovers, 4 vs 2 flights); see [Day 23](results/day23_walls_test.md) and
+   [Day 24](results/day24_repeats.md).
 6. **Evaluation pitfalls, caught and corrected:** time spent on the ground inflated accuracy
    (all headline figures are now airborne-only); FAST-LIO2 (x forward, y left, z up) and PX4
    (x forward, y right, z down) frames differ, with a 90-degree heading offset to north; and a

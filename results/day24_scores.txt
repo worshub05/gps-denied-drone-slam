@@ -18,3 +18,15 @@ note | run05: clean start (SLAM error 0.04 m on the ground), then in-flight east
 note |   error 0.24 m -> 1.37 m -> ~2.7-2.9 m; SLAM under-counted eastward motion (truth 10.36 m east
 note |   vs SLAM 7.84 m at 115 s). Same east-west weakness as Day 23 (outdoor_v1). Counted, not excluded.
 note | follow_behind_wall_04 = leftover recording from an earlier attempt, not scored.
+v1b01 | airborne samples: 4150
+v1b01 | distance from planned route: mean 0.22 m, max 0.61 m
+v1b01 | real clearance from obstacles: min 2.34 m (planned min was set by the planner)
+v1b01 | landing point vs goal: 0.20 m
+v1b01 | saved /home/shub_2605/gpsdenied_ws/results/plots/flown_follow_bw_v1b_01.png
+v1b01 | furthest east (world x): 9.16 m, clearance to east wall face (x 11.85): 2.69 m
+v1b02 | airborne samples: 3948
+v1b02 | distance from planned route: mean 0.13 m, max 0.60 m
+v1b02 | real clearance from obstacles: min 2.28 m (planned min was set by the planner)
+v1b02 | landing point vs goal: 0.54 m
+v1b02 | saved /home/shub_2605/gpsdenied_ws/results/plots/flown_follow_bw_v1b_02.png
+v1b02 | furthest east (world x): 9.07 m, clearance to east wall face (x 11.85): 2.78 m
