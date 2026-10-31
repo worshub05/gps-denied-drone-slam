@@ -1,0 +1,20 @@
+run02 | airborne samples: 4499
+run02 | distance from planned route: mean 0.54 m, max 1.42 m
+run02 | real clearance from obstacles: min 1.97 m (planned min was set by the planner)
+run02 | landing point vs goal: 0.67 m
+run02 | saved /home/shub_2605/gpsdenied_ws/results/plots/flown_follow_behind_wall_02.png
+run03 | airborne samples: 4877
+run03 | distance from planned route: mean 0.49 m, max 1.26 m
+run03 | real clearance from obstacles: min 2.20 m (planned min was set by the planner)
+run03 | landing point vs goal: 0.96 m
+run03 | saved /home/shub_2605/gpsdenied_ws/results/plots/flown_follow_behind_wall_03.png
+run05 | airborne samples: 3918
+run05 | distance from planned route: mean 0.96 m, max 2.54 m
+run05 | real clearance from obstacles: min 1.60 m (planned min was set by the planner)
+run05 | landing point vs goal: 2.69 m
+run05 | saved /home/shub_2605/gpsdenied_ws/results/plots/flown_follow_behind_wall_05.png
+note | run01 = Day 18 flight (follow_behind_wall_01): mean 0.26, max 0.82, clearance 2.06, landing 0.49
+note | run05: clean start (SLAM error 0.04 m on the ground), then in-flight east-west drift:
+note |   error 0.24 m -> 1.37 m -> ~2.7-2.9 m; SLAM under-counted eastward motion (truth 10.36 m east
+note |   vs SLAM 7.84 m at 115 s). Same east-west weakness as Day 23 (outdoor_v1). Counted, not excluded.
+note | follow_behind_wall_04 = leftover recording from an earlier attempt, not scored.
