@@ -105,6 +105,12 @@ Details: [Day 15](results/day15_mapping.md), [Day 16](results/day16_planner.md),
    launch file edited in `src/` but not rebuilt meant a modified world was never loaded. The
    correction is recorded in the results files.
 
+7. **Robust to sensor noise.** The simulated IMU feeding FAST-LIO2 was originally noise-free.
+   With realistic MEMS IMU noise and bias, hover and route-following accuracy were unchanged;
+   with 3x that noise plus 3x lidar noise, the worst route deviation rose only from ~0.6 m to
+   0.76 m. Scene geometry matters far more than sensor noise here (single run per level); see
+   [Day 25](results/day25_noise.md).
+
 ## Limitations
 
 - Simulation only, in a small world with six objects.

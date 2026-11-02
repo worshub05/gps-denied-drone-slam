@@ -1,0 +1,18 @@
+noise_realistic | airborne samples: 3785
+noise_realistic | distance from planned route: mean 0.10 m, max 0.35 m
+noise_realistic | real clearance from obstacles: min 2.24 m (planned min was set by the planner)
+noise_realistic | landing point vs goal: 0.28 m
+noise_realistic | saved /home/shub_2605/gpsdenied_ws/results/plots/flown_follow_noise_realistic.png
+imu_check | on-ground IMU std, first 500 samples: noise-free run gyro_z 0.000000 rad/s, accel_x 0.0000 m/s^2
+imu_check | realistic run gyro_z 0.000205 rad/s (target 0.0002), accel_x 0.0168 m/s^2 (target 0.017): noise active
+hover_realistic | 502 s airborne, first 60 s max 0.07 m, max drift 0.17 m, never beyond 1 m, SLAM error max 0.05 m
+hover_heavy | hover_noise_heavy: first 60 s: drift mean 0.05 m, max 0.15 m | SLAM error mean 0.04 m, max 0.06 m
+hover_heavy | hover_noise_heavy: final offset from takeoff: east +0.01 m, north +0.03 m
+hover_heavy | hover_noise_heavy: first drift beyond 1 m: never
+hover_heavy | hover_noise_heavy: airborne 222 s | true drift from takeoff point: mean 0.06 m, max 0.15 m, at end 0.03 m | SLAM error: mean 0.05 m, max 0.07 m
+imu_check | heavy run gyro_z std 0.000636 rad/s (target 0.0006), accel_x std 0.0527 m/s^2 (target 0.051)
+noise_heavy | airborne samples: 4056
+noise_heavy | distance from planned route: mean 0.21 m, max 0.76 m
+noise_heavy | real clearance from obstacles: min 2.40 m (planned min was set by the planner)
+noise_heavy | landing point vs goal: 0.38 m
+noise_heavy | saved /home/shub_2605/gpsdenied_ws/results/plots/flown_follow_noise_heavy.png
