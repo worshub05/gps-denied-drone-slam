@@ -20,6 +20,8 @@ Black: mapped obstacles. Grey: 2 m safety margin.*
   from the goal (single run).
 - **Long flight on SLAM alone:** 0.32 m RMSE over about 155 m at 2 m/s, matching the same
   survey flown with GPS (0.31 m).
+- **Stress-tested:** repeat runs, IMU/lidar noise and wind. Route following stayed within
+  0.76 m of the plan in every test once the scene had enough geometry.
 - **Measured, not eyeballed:** every result is scored against simulator ground truth with
   [evo](https://github.com/MichaelGrupp/evo), using airborne-only metrics.
 
@@ -80,6 +82,20 @@ Full method and per-run details: [results/week2_summary.md](results/week2_summar
 Details: [Day 15](results/day15_mapping.md), [Day 16](results/day16_planner.md),
 [Day 17](results/day17_path_following.md), [Day 18](results/day18_demo.md).
 
+### Robustness tests (post-v1.0)
+
+| Test | Result |
+|------|--------|
+| Hover, original world (3 runs) | drifted east 0.24-3.92 m; one run passed 1 m after 164 s |
+| Hover, east/west walls added (2 runs) | max drift 0.11 m and 0.17 m over 343 s and 402 s |
+| Route, realistic IMU + lidar noise | mean deviation 0.10 m, max 0.35 m |
+| Route, 3x IMU noise + 3x lidar noise | mean 0.21 m, max 0.76 m, min clearance 2.40 m, landed 0.38 m from goal |
+| Hover, 3 m/s wind + gusts to 10 m/s | 8.4 deg tilt, SLAM error max 0.19 m, drift max 0.65 m while holding height |
+| Route, same wind | mean 0.14 m, max 0.53 m, min clearance 2.20 m, landed 0.69 m from goal |
+
+Details: [Day 23](results/day23_walls_test.md), [Day 24](results/day24_repeats.md),
+[Day 25](results/day25_noise.md), [Day 26](results/day26_wind.md).
+
 ## Key findings
 
 1. **Per-point lidar timing matters.** Gazebo's lidar gives no per-point timestamps. Deriving
@@ -120,7 +136,8 @@ Details: [Day 15](results/day15_mapping.md), [Day 16](results/day16_planner.md),
 ## Limitations
 
 - Simulation only, in a small world with six objects.
-- Most results come from single runs, so they are indicative rather than averages.
+- Most results come from 1-4 runs, so they are indicative rather than averages.
+- Wind acts on the rotors only (motor-model drag), and the drone drifts downwind while landing.
 - The map treats unseen space as free, and it is built from a prior survey flight.
 - The drone deviates up to about 1 m from its planned route, so planning relies on a 2 m margin.
 - Planning is 2D, at a fixed flight height.
@@ -128,7 +145,8 @@ Details: [Day 15](results/day15_mapping.md), [Day 16](results/day16_planner.md),
 
 ## Future work
 
-Planned next steps (walls test, repeat runs, noise and wind, voice control, harder worlds, moving obstacles): [docs/ROADMAP.md](docs/ROADMAP.md).
+Done in v1.1: walls test, repeat runs, sensor noise and wind (see Robustness tests).
+Planned next: voice control, harder worlds and moving obstacles: [docs/ROADMAP.md](docs/ROADMAP.md).
 
 ## Repository layout
 
