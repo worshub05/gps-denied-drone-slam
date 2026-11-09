@@ -6,3 +6,8 @@ tilt | hover_v1b_c  mean roll -0.00 deg, mean pitch +0.01 deg, mean tilt 0.10 de
 tilt | hover_wind   mean roll +5.70 deg, mean pitch -5.71 deg, mean tilt 8.35 deg
 hover_wind_phase | while holding height: 398 s, drift mean 0.14 m, max 0.65 m
 hover_wind_phase | while descending: drift up to 2.18 m
+follow_wind | airborne samples: 5574
+follow_wind | distance from planned route: mean 0.14 m, max 0.53 m
+follow_wind | real clearance from obstacles: min 2.20 m (planned min was set by the planner)
+follow_wind | landing point vs goal: 0.69 m
+follow_wind | saved /home/shub_2605/gpsdenied_ws/results/plots/flown_follow_wind_b.png

@@ -111,6 +111,12 @@ Details: [Day 15](results/day15_mapping.md), [Day 16](results/day16_planner.md),
    0.76 m. Scene geometry matters far more than sensor noise here (single run per level); see
    [Day 25](results/day25_noise.md).
 
+8. **SLAM holds up in wind; descent is the weak point.** With 3 m/s wind plus gusts up to
+   10 m/s, the drone leaned about 8 deg yet FAST-LIO2 error stayed under 0.19 m, and the
+   behind-wall route was followed as well as in calm air (mean 0.14 m, max 0.53 m). Landing
+   drifted downwind (0.69 m vs 0.37 m calm). The preflight check also caught one SLAM startup
+   failure before takeoff (single run); see [Day 26](results/day26_wind.md).
+
 ## Limitations
 
 - Simulation only, in a small world with six objects.
