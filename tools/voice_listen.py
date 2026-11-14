@@ -15,7 +15,7 @@ GAIN = float(sys.argv[1]) if len(sys.argv) > 1 else 3.0
 # of the small Vosk model (found in Day 28 testing).
 KEYWORDS = [
     ('stop',               ['stop', 'abort', 'halt']),
-    ('land',               ['land', 'landing']),
+    ('land',               ['land', 'landing', 'learned', 'lang']),
     ('take off',           ['take off', 'takeoff', 'take of']),
     ('hover',              ['hover', 'hold', 'stay', 'howard', 'however']),
     ('go behind the wall', ['wall', 'behind']),
